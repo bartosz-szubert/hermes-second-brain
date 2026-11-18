@@ -89,8 +89,8 @@ flowchart LR
 
 | Path | Contents |
 |---|---|
-| [`docs/architecture.md`](docs/architecture.md) | Components, Telegram structure, skills policy |
-| [`docs/security.md`](docs/security.md) | Hardening steps and the reason for each |
+| [`docs/architecture.md`](docs/architecture.md) | Trust boundaries, credentials, scheduled jobs, design decisions, known limitations |
+| [`docs/security.md`](docs/security.md) | Threat model, controls by layer with how each was verified, gaps found by testing |
 | [`docs/knowledge-base.md`](docs/knowledge-base.md) | The Obsidian "LLM Wiki" pattern, wiki rules, write mechanism |
 | [`docs/model-selection.md`](docs/model-selection.md) | Options compared, real-task tests, cost |
 | [`docs/project-management.md`](docs/project-management.md) | Epics, sprints, velocity, retrospectives |
