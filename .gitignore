@@ -1,0 +1,8 @@
+# Never commit secrets or local state
+.env
+*.env
+*.bak*
+*.db
+*.sqlite*
+.DS_Store
+Thumbs.db
