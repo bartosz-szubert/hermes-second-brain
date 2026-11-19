@@ -1,6 +1,6 @@
 # Postmortem: journal bot replied with garbled text (2026-09-26)
 
-**Status:** final · **Written:** 2026-11-17 · **Format:** blameless · **Jira:** SCRUM-56
+**Status:** final · **Written:** 2026-11-17 · **Format:** blameless
 
 ## Summary
 
@@ -53,14 +53,14 @@ The default model came from the hosting template: a free model variant on a thir
 
 ## Actions
 
-| Action | Jira | Status (17 Nov 2026) |
-|---|---|---|
-| Clean rebuild of the agent with a reviewed, minimal toolset | SCRUM-32 | Done (Sprint 2) |
-| Model selection with tests on real tasks, cost measured from the sessions database | SCRUM-42 | Done (22 Oct) |
-| Toolsets reviewed per channel, including scheduled jobs | — | Done (28 Oct) |
-| Daily self-check run by a script on the host, result in the morning brief | SCRUM-35 | Interim self-check in the brief live; script version planned |
-| Spending limits and cost alerts | SCRUM-41 | Backlog |
-| Off-server backup with the backup status in the morning brief | SCRUM-16 | Running since 13 Nov |
+| Action | Status (17 Nov 2026) |
+|---|---|
+| Clean rebuild of the agent with a reviewed, minimal toolset | Done (Sprint 2) |
+| Model selection with tests on real tasks, cost measured from the sessions database | Done (22 Oct) |
+| Toolsets reviewed per channel, including scheduled jobs | Done (28 Oct) |
+| Daily self-check run by a script on the host, result in the morning brief | Interim self-check in the brief live; script version planned |
+| Spending limits and cost alerts | Backlog |
+| Off-server backup with the backup status in the morning brief | Running since 13 Nov |
 
 ## Lessons
 

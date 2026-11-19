@@ -59,7 +59,7 @@ Each of these changed how the project is run — the right-hand column is the pr
 ## Verify, don't assume
 
 - **Debug at the data layer.** The decisive evidence for the journal incident was in the database (`content` vs `reasoning_content`), not in logs.
-- **Not finding a setting in the docs does not prove it does not exist.** I first concluded that a service had no 2FA after searching documentation and screenshots; it was simply in a place that neither covered. Check the product itself before deciding.
+- **Not finding a setting in the docs does not prove it does not exist.** A service was first judged to have no 2FA after a search of its documentation and screenshots; the setting was simply in a place that neither covered. Check the product itself before deciding.
 - **Verify provider claims in the official docs before spending money.** Reading the fee, expiry and privacy rules first changed the plan (small top-ups, hard cap, privacy toggles reviewed before the first payment).
 - **Read the log, not just the status counters.** fail2ban's `status` counters restart from zero when the service restarts; the log still showed every attempt and ban.
 - **Check a pattern at its source, and say when you could not.** The description of the LLM Wiki pattern came from a derivative write-up, so its quotes were flagged as unverified; the approval step turned out to be the project's own addition, not part of the pattern (confirmed against the original gist).

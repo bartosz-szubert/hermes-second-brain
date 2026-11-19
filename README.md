@@ -47,7 +47,7 @@ The project is deliberately managed the way software teams work, so that every p
 | **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done — reported as missed, the item closed as *Won't Do*, its measurable part re-planned |
 | **Retrospectives with actions** | Each sprint ends with 3–5 actions, and the next retro checks whether they worked |
 | **Decision records** | 80 decisions, each with rejected alternatives and the reason |
-| **Blameless postmortem** | [POSTMORTEM.md](POSTMORTEM.md): timeline, root cause, contributing factors, actions with Jira status |
+| **Blameless postmortem** | [POSTMORTEM.md](POSTMORTEM.md): timeline, root cause, contributing factors, actions with their status |
 | **Least privilege** | Panels only on localhost, key-only SSH, fine-grained tokens, a backup key that cannot delete |
 | **Verify, don't trust** | Model usage and cost read from the session database; a backup restore compared by checksum; a "no delete" key tested on a decoy file |
 | **AI-assisted delivery** | Built with an AI assistant as a pair: the author set goals, made every decision, approved each change and ran every check; nothing was applied unreviewed |
