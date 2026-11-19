@@ -6,7 +6,7 @@
 
 A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own** — and that the whole build was run as a Scrum project with measurable outcomes.
 
-| 4 sprints | 93 SP delivered in sprints 1–3 | 73 decisions logged | 65 lessons recorded | 1 postmortem | 0 secrets in this repo |
+| 4 sprints | 93 SP delivered in sprints 1–3 | 80 decisions logged | 63 lessons recorded | 1 postmortem | 0 secrets in this repo |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 
 **Author:** Bartosz Szubert — project leader in automotive manufacturing, building this in his own time to work hands-on with the tools and practices of software teams.
@@ -46,7 +46,7 @@ The project is deliberately managed the way software teams work, so that every p
 | **Definition of Done** | Started with "works and is tested"; retrospectives added *agent claims verified in data* and a *deployment checklist* for every scheduled job |
 | **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done — reported as missed, the item closed as *Won't Do*, its measurable part re-planned |
 | **Retrospectives with actions** | Each sprint ends with 3–5 actions, and the next retro checks whether they worked |
-| **Decision records** | 73 decisions, each with rejected alternatives and the reason |
+| **Decision records** | 80 decisions, each with rejected alternatives and the reason |
 | **Blameless postmortem** | [POSTMORTEM.md](POSTMORTEM.md): timeline, root cause, contributing factors, actions with Jira status |
 | **Least privilege** | Panels only on localhost, key-only SSH, fine-grained tokens, a backup key that cannot delete |
 | **Verify, don't trust** | Model usage and cost read from the session database; a backup restore compared by checksum; a "no delete" key tested on a decoy file |
