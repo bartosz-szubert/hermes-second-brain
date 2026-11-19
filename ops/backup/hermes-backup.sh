@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Nightly backup of Hermes and n8n data to Backblaze B2 with restic (SCRUM-16).
+# Nightly backup of Hermes and n8n data to Backblaze B2 with restic.
 # Runs as root from hermes-backup.timer. Secrets live only in /root/.restic (700/600).
 set -uo pipefail
 export TZ=Europe/Warsaw
@@ -12,7 +12,7 @@ N8N_DIR=/docker/n8n                         # n8n compose project
 VAULT_SYNC=/opt/hermes-vault-sync           # host-side vault write path (its repo clone is excluded)
 STAGE=/var/backups/hermes-sqlite            # root-only staging for consistent SQLite copies
 # ---------------------------------------------------------------------------
-STATUS_DIR="$H/agent-data/status"     # readable by Hermes, owned by root (interim until SCRUM-35)
+STATUS_DIR="$H/agent-data/status"     # readable by Hermes, owned by root (interim until the script-based self-check)
 STATUS="$STATUS_DIR/backup.txt"
 
 now() { date '+%Y-%m-%d %H:%M'; }

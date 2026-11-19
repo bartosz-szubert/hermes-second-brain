@@ -1,5 +1,5 @@
 [Unit]
-Description=Nightly Hermes and n8n backup to Backblaze B2 (restic, SCRUM-16)
+Description=Nightly Hermes and n8n backup to Backblaze B2 (restic)
 Wants=network-online.target
 After=network-online.target
 
