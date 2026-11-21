@@ -14,7 +14,9 @@ gantt
     Sprint 1 · secure server, vault        :done, s1, 2026-09-28, 2026-10-09
     Sprint 2 · clean install, model, repo  :done, s2, 2026-10-12, 2026-10-23
     Sprint 3 · agents in daily use         :crit, done, s3, 2026-10-25, 2026-11-06
-    Sprint 4 · backup, postmortem, publish :active, s4, 2026-11-09, 2026-11-20
+    Sprint 4 · backup, postmortem, publish :crit, done, s4, 2026-11-09, 2026-11-20
+    section Kanban
+    Continuous flow                        :active, k1, 2026-11-21, 2026-12-04
     section Milestones
     Journal incident                       :milestone, m1, 2026-09-26, 0d
     Clean install live                     :milestone, m2, 2026-10-17, 0d
@@ -22,9 +24,11 @@ gantt
     Daily brief, journal, tutor live       :milestone, m4, 2026-10-28, 0d
     Sprint 3 goal missed                   :milestone, m5, 2026-11-08, 0d
     Nightly off-site backup live           :milestone, m6, 2026-11-13, 0d
+    Sprint 4 closed, publication carried   :milestone, m7, 2026-11-20, 0d
+    Switch to Kanban                       :milestone, m8, 2026-11-21, 0d
 ```
 
-Sprint 3 is marked red: all but one item were done, but its goal was missed — see [the sprint that failed](project-management.md#the-sprint-that-failed--and-what-changed).
+Sprints 3 and 4 are marked red: Sprint 3 finished all but one item and still missed its goal — see [the sprint that failed](project-management.md#the-sprint-that-failed--and-what-changed); Sprint 4 closed on time without the publication.
 
 ## Before the first sprint
 
@@ -84,3 +88,10 @@ Sprint 3 is marked red: all but one item were done, but its goal was missed — 
 | 17 Nov | Scope at risk: options set out, a Thursday checkpoint agreed. Backup status added to the brief's self-check and tested with a fake failure. **Postmortem** written from the archived database without reading journal content. |
 | 18 Nov | **Publication:** README rewritten after a review from an outside reader's point of view; licences and repository name decided; a private repository created with only reviewed files. |
 | 19 Nov | Checkpoint: the self-check script moved out of the sprint with a comment. Documents reviewed and committed one by one against a nine-point checklist. New models from the provider noted for the cost review. |
+| 20 Nov | **Sprint 4 review, retrospective, close:** tutor checked in the learning log (7 days), backup closed after `restic stats` and a vault note; publication checked against its Definition of Done (1 of 4) and carried over; goal partly missed; three retrospective actions. |
+
+## Kanban (from 21 Nov)
+
+| Date | Session |
+|---|---|
+| 21 Nov | **Switch to Kanban:** the velocity report showed zero completed for every sprint — traced to the *Won't Do* column sitting right of *Done* and fixed; sprint reports saved as screenshots, then sprints turned off; board with WIP limits; first replenishment: publication re-estimated at 13 SP and split in two, security updates and the self-check script pulled into *To Do*. Pending agent approvals cleared: one memory entry approved, four rejected, a wiki batch approved and confirmed by the sync script. |

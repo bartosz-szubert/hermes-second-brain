@@ -19,26 +19,27 @@
 
 Set when Sprint 4 was planned, checked at its review on 20 November:
 
-| Criterion | Status (19 Nov) |
+| Criterion | Status (21 Nov) |
 |---|---|
 | Off-site backup running, a restore tested, failures visible in the brief | Met |
 | The journal incident written up as a blameless postmortem | Met |
-| This repository public, every file reviewed for private data | In progress |
-| The English tutor used on five days of the sprint, checked in the learning log | In progress |
+| This repository public, every file reviewed for private data | In progress — not met by the end of Sprint 4; now two items on the Kanban board |
+| The English tutor used on five days of the sprint, checked in the learning log | Met — seven days |
 | The agent observable through a script-based self-check | **Moved to stage 1 follow-ups** at the scope checkpoint; an interim self-check runs in the brief |
 
 ## Carried forward from stage 1
 
-Open items, each already in the backlog with a Definition of Done, in the proposed order for the next sprint — ordered by risk reduced per point of effort:
+Open items, each in the backlog with a Definition of Done, pulled onto the Kanban board roughly in this order — by risk reduced per point of effort:
 
 | # | Item | Why it matters |
 |---|---|---|
-| 1 | **Self-check run by a script on the host**, result in a read-only folder for the agent | Health checks that do not depend on the agent's own judgement; moved out of Sprint 4 at the scope checkpoint |
-| 2 | **Model and cost review** after the first month — including the models released in November | The review plan with decision rules is in [model selection](model-selection.md#review-plan-first-month-of-daily-use) |
-| 3 | **Full restore rehearsal** on a fresh server | Only a single-file restore has been tested so far |
-| 4 | **Cost alerts and per-agent caps** for any pay-as-you-go use | No automatic model fallback exists yet |
-| 5 | **Read isolation between profiles** | Today a tested rule, not a technical boundary |
-| 6 | **Pinned container images** and a controlled restart test | Fewer surprises from upstream changes |
+| 1 | **Security updates for the server and n8n**, with a fixed patching rhythm | Many patches were pending; the server is reachable from the internet |
+| 2 | **Self-check run by a script on the host**, result in a read-only folder for the agent | Health checks that do not depend on the agent's own judgement; moved out of Sprint 4 at the scope checkpoint |
+| 3 | **Model and cost review** after the first month — including the models released in November | The review plan with decision rules is in [model selection](model-selection.md#review-plan-first-month-of-daily-use) |
+| 4 | **Full restore rehearsal** on a fresh server | Only a single-file restore has been tested so far |
+| 5 | **Cost alerts and per-agent caps** for any pay-as-you-go use | No automatic model fallback exists yet |
+| 6 | **Read isolation between profiles** | Today a tested rule, not a technical boundary |
+| 7 | **Pinned container images** and a controlled restart test | Fewer surprises from upstream changes |
 
 ## Stage 2 — private
 

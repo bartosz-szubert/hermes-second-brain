@@ -1,6 +1,6 @@
 # Lessons learned
 
-63 lessons from building and running the system, grouped by theme. Each one came from something that actually happened in this project.
+64 lessons from building and running the system, grouped by theme. Each one came from something that actually happened in this project.
 
 ## If you read only seven
 
@@ -92,6 +92,7 @@ Each of these changed how the project is run — the right-hand column is the pr
 - **Draw the dependency arrow from the output.** A task whose result another task needs to *test* must come first, even if it looks like a sub-part of the later one (the wiki rules had to precede the agent's write access).
 - **Estimate as a team, at the right moment.** The AI assistant had been proposing story points on its own (and re-estimated one item three times mid-sprint). In Scrum the developers estimate together during refinement or sprint planning; new backlog items may stay unestimated until then. Since then: Planning Poker style — the author gives his estimate first, the assistant second with its reasoning, so the author's view is not anchored. Mid-sprint re-estimation became a retrospective topic.
 - **Don't bend the Definition of Done to close an item.** Close it on what was met and move the rest, visibly and linked, to the items it belongs to.
+- **Board columns drive the reports — retroactively.** A *Won't Do* column added to the right of *Done* made Jira count only abandoned items as completed, and the velocity report showed zero for every past sprint. Keep *Done* as the last column and re-check reports after changing the board.
 - **Jira records the commitment when the sprint starts.** Starting a sprint before estimating its items leaves the velocity report with a commitment of zero; estimate first, then start.
 - **Read the backlog before planning.** Existing items held earlier decisions that contradicted the new specs (e.g. "never nudge" versus a daily reminder); a full export and a refinement pass before planning surfaced them while they were still cheap to resolve.
 - **A sprint goal tied to a habit can fail with every task done.** Seven items were finished, yet the goal failed on daily use of one agent; habits need a measurable action and a visible daily signal.

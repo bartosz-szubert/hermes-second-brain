@@ -2,11 +2,11 @@
 
 **A personal AI agent on a short leash — built and run like a production service, managed like an IT project.**
 
-![Licence: MIT](https://img.shields.io/badge/code-MIT-blue) ![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey) ![Status: stage 1 closing](https://img.shields.io/badge/status-stage%201%20closing-yellow) ![Managed in Jira](https://img.shields.io/badge/managed%20in-Jira%20Scrum-0052CC)
+![Licence: MIT](https://img.shields.io/badge/code-MIT-blue) ![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey) ![Status: stage 1 closing](https://img.shields.io/badge/status-stage%201%20closing-yellow) ![Managed in Jira](https://img.shields.io/badge/managed%20in-Jira-0052CC)
 
-A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own** — and that the whole build was run as a Scrum project with measurable outcomes.
+A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own** — and that the whole build was run as an agile project in Jira, four Scrum sprints and then Kanban, with measurable outcomes.
 
-| 4 sprints | 93 SP delivered in sprints 1–3 | 80 decisions logged | 63 lessons recorded | 1 postmortem | 0 secrets in this repo |
+| 4 sprints, then Kanban | 111 SP delivered in sprints | 82 decisions logged | 64 lessons recorded | 1 postmortem | 0 secrets in this repo |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 
 **Author:** Bartosz Szubert — project leader in automotive manufacturing, building this in his own time to work hands-on with the tools and practices of software teams.
@@ -17,7 +17,7 @@ A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) conne
 
 1. **[The short leash](#a-second-brain-on-a-short-leash)** — what the agent may and may not do, and how each limit is enforced.
 2. **[POSTMORTEM.md](POSTMORTEM.md)** — a real incident, written blameless, every fact marked as confirmed in data or not.
-3. **[Project management](docs/project-management.md)** — sprints, velocity, a sprint goal that was missed and what changed afterwards.
+3. **[Project management](docs/project-management.md)** — four sprints, velocity, two missed sprint goals and what changed afterwards, then the move to Kanban.
 4. **[Decision log](docs/decisions.md)** — every decision with the alternatives rejected and why.
 5. **[ops/backup](ops/backup/)** — a small, tested piece of real operations code.
 
@@ -36,21 +36,34 @@ The agent is useful because it can read a lot; it is safe because it can change 
 | Read web pages and news | Take instructions from them | External content is treated as data |
 | Report on its own actions | Have that report count unchecked | Claims are verified in logs or the session database |
 
+<details>
+<summary><strong>See a real approval</strong> — a wiki page proposed, approved in Telegram and committed by the script (screenshot, Polish)</summary>
+
+![A numbered batch proposed in Telegram, approved with "tak", written to the proposals folder and confirmed by the sync script's result log](docs/img/telegram-vault-approval.png)
+
+From top to bottom: batch 009 proposes one new wiki page with its sources; the full page text is omitted; the batch lists the index and log entries and states "no deletions", then asks for approval. After the author replies *tak* (yes), the agent writes the batch to its proposals folder, with a `GOTOWE` (ready) marker last, and **does not claim success** until the sync script reports it. The bottom line is that script's result log, outside the agent: committed as `5d25116`.
+
+</details>
+
 ## How the work was run
 
 The project is deliberately managed the way software teams work, so that every practice can be shown, not just named.
 
 | Practice | In this project |
 |---|---|
-| **Scrum in Jira** | Epics, stories, two-week sprints with a goal, Planning Poker (author estimates first, re-vote after discussion), velocity 29 → 33 → 31 |
+| **Scrum, then Kanban, in Jira** | Epics, stories, four two-week sprints with a goal, Planning Poker (author estimates first, re-vote after discussion), velocity 29 → 33 → 31 → 18; then Kanban with WIP limits once Scrum had served its learning goal |
 | **Definition of Done** | Started with "works and is tested"; retrospectives added *agent claims verified in data* and a *deployment checklist* for every scheduled job |
-| **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done — reported as missed, the item closed as *Won't Do*, its measurable part re-planned |
+| **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done — reported as missed, the item closed as *Won't Do*, its measurable part re-planned. Sprint 4 closed on time with publication not done, rather than stretched |
 | **Retrospectives with actions** | Each sprint ends with 3–5 actions, and the next retro checks whether they worked |
-| **Decision records** | 80 decisions, each with rejected alternatives and the reason |
+| **Decision records** | 82 decisions, each with rejected alternatives and the reason |
 | **Blameless postmortem** | [POSTMORTEM.md](POSTMORTEM.md): timeline, root cause, contributing factors, actions with their status |
 | **Least privilege** | Panels only on localhost, key-only SSH, fine-grained tokens, a backup key that cannot delete |
 | **Verify, don't trust** | Model usage and cost read from the session database; a backup restore compared by checksum; a "no delete" key tested on a decoy file |
 | **AI-assisted delivery** | Built with an AI assistant as a pair: the author set goals, made every decision, approved each change and ran every check; nothing was applied unreviewed |
+
+![Jira velocity report: completed 29, 33, 31 and 18 story points in sprints 1–4, average 27.75](docs/img/jira-velocity.png)
+
+*Velocity across the four sprints, straight from Jira. Sprint 1 shows no commitment because it was started before its items were estimated; Sprint 4 shows the scope checkpoint and the unpublished repository. Details in [project management](docs/project-management.md).*
 
 ## Architecture
 
@@ -112,6 +125,10 @@ flowchart LR
 ## Built with
 
 Hermes Agent · Obsidian · GitHub · Telegram · Docker · Traefik · n8n · restic · Backblaze B2 · systemd · Python · Jira
+
+## More projects
+
+[human-gated-agent](https://github.com/bartosz-szubert/human-gated-agent) · [ai-act-monitor](https://github.com/bartosz-szubert/ai-act-monitor) · [daily-dinner-ideas-agent](https://github.com/bartosz-szubert/daily-dinner-ideas-agent) · [motogp-calendar-monitor](https://github.com/bartosz-szubert/motogp-calendar-monitor)
 
 ## Licence
 

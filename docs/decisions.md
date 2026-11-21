@@ -16,6 +16,7 @@ Every decision that shaped the project, with the alternatives that were rejected
 | **Scheduled jobs get their own reduced toolset** (D-63) (28 Oct) | Closed a gap the brief's own self-check found |
 | **A missed sprint goal is reported as missed; abandoned items close as *Won't Do*** (D-69, D-70) (8 Nov) | Keeps the numbers honest — [project management](project-management.md) |
 | **Backups with a key that cannot delete** (D-73) (12 Nov) | A compromised server cannot destroy its own backups |
+| **From Scrum to Kanban** (D-82) (21 Nov) | The method changed when its purpose was met, with the reason recorded — [project management](project-management.md#from-scrum-to-kanban) |
 
 ## Full log
 
@@ -101,3 +102,5 @@ Every decision that shaped the project, with the alternatives that were rejected
 | D-78 | 2026-11-17 | Process | Try the whole Sprint 4 scope, with a Thursday checkpoint that falls back to moving the self-check script out | Move it out at once; extend the sprint | The author's choice; the work order (backup, postmortem, publication, self-check last) made the fallback cost nothing | Active |
 | D-79 | 2026-11-17 | Security | Delete the old pre-rebuild copy after publication | Delete now; keep for good | It is the evidence behind the postmortem until the public text is final; afterwards it is only private data | Planned |
 | D-80 | 2026-11-19 | Process | At the checkpoint, move the script-based self-check out of Sprint 4 now, with a comment | Leave it in until the sprint closes | The decision was already made; removing it now shows a deliberate scope change in the sprint report instead of an unexplained "not completed" | Active |
+| D-81 | 2026-11-20 | Process | Close Sprint 4 on time with publication not done; it goes back to the backlog | Publish the same evening; extend the sprint over the weekend | Its Definition of Done needs a fresh-eye review the next day, publishing cannot be undone, and stretching the sprint would hide the planning problem the retrospective needed to see | Active |
+| D-82 | 2026-11-21 | Process | Move the Jira project from Scrum to Kanban: WIP limits (To Do 3, In Progress 2, In Review 2), weekly replenishment, review and retrospective every second week; story points kept, throughput and cycle time instead of velocity | Stay with Scrum; switch after publication | Scrum met its learning goal (four sprints, velocity measured); a WIP-limited flow fits irregular evening work better than a fixed deadline; a clean boundary — the sprint closed and only publication in progress | Active |

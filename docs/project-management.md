@@ -1,11 +1,11 @@
 # Project management
 
-The build is run as a Scrum project in Jira (free plan). The point is not ceremony for its own sake: every practice below produced a decision, a correction or a number that is visible in this repository.
+The build was run as a Scrum project in Jira (free plan) for four sprints, then moved to Kanban — see [from Scrum to Kanban](#from-scrum-to-kanban). The point is not ceremony for its own sake: every practice below produced a decision, a correction or a number that is visible in this repository.
 
 | Role | Who | Responsibilities |
 |---|---|---|
 | Product Owner and developer | The author | Goals, priorities, every decision and approval, estimates (first vote), all changes on the server, every check |
-| Scrum Master and drafting partner | AI assistant | Facilitates planning, reviews and retrospectives; drafts specs, Definitions of Done and documents; challenges estimates and scope; never applies a change on its own |
+| Scrum Master (Kanban: flow keeper) and drafting partner | AI assistant | Facilitates planning, reviews and retrospectives; drafts specs, Definitions of Done and documents; challenges estimates and scope; never applies a change on its own |
 
 ## Sprints at a glance
 
@@ -14,11 +14,15 @@ The build is run as a Scrum project in Jira (free plan). The point is not ceremo
 | 1 | 28 Sep – 9 Oct 2026 | A secure server and a knowledge base ready for the start of studies | 20¹ | **29** | 145% | Yes |
 | 2 | 12 – 23 Oct | The agent runs on a clean install with a chosen model and reads the knowledge base from a private repository; SSH secured | 25 | **33** | 132% | Yes |
 | 3 | 25 Oct – 6 Nov | Brief, journal and English tutor work in Telegram and are used on at least 5 days | 37 | **31** | 84% | **No** — see below |
-| 4 | 9 – 20 Nov | Stage 1 closed: backup, postmortem, publication, tutor used on 5 days | 33 | — | — | In progress |
+| 4 | 9 – 20 Nov | Stage 1 closed: backup, postmortem, publication, tutor used on 5 days | 33 | **18** | 55%² | **Partly** — not published |
 
 ¹ Jira shows 0 for Sprint 1, because the sprint was started before its items were estimated — one of the first lessons ("start a sprint only after estimation").
 
-**Calibration.** The first two sprints were under-committed (work was added mid-sprint), the third over-committed. From Sprint 4 the commitment is sized from the average velocity (31) instead of from optimism, and stretch items are estimated so that real load shows in the numbers.
+² 78% of the 23 SP left after the scope checkpoint moved an 8-point item out (with the 2-point reserve untouched).
+
+**Calibration.** The first two sprints were under-committed (work was added mid-sprint), the third over-committed. From Sprint 4 the commitment is sized from the average velocity (31) instead of from optimism, and stretch items are estimated so that real load shows in the numbers. Sprint 4 still missed: publication was estimated at 5 SP and turned out to be worth 8–13 (re-estimated at 13 and split in two), and unplanned work entered without an estimate.
+
+![Jira velocity report: commitment and completed story points for sprints 1–4](img/jira-velocity.png)
 
 ## How the work is run
 
@@ -50,7 +54,32 @@ Sprint 3 finished **seven of eight items, both estimated stretch items included,
 - **Closed as *Won't Do*** (a status created for it) with a link to its replacement, instead of being marked *Done* with an exception.
 - **Root cause in the retrospective:** the item was a habit, not a piece of work, and it entered *In Progress* only in the last days.
 - **Actions:** plan from velocity (~30 SP); every item must end in a result that is *done*; the tutor part re-planned as a measurable action — reply to the evening reminder on five days, checked in the learning log; mid-sprint scope only as a swap.
+![Sprint 3 burndown: remaining work falls to 3 SP by 3 November and stays flat past the planned end](img/jira-sprint3-burndown.png)
+
+*Sprint 3 burndown. Everything burns down by 3 November except the 3-point week-of-use item, which stays open past the planned end. The short spikes on the first day are an item added mid-sprint with its estimate.*
+
 - **In Sprint 4** these actions were applied: a scope checkpoint on Thursday moved one 8-point item out of the sprint when four evenings remained for about 21 points, and the decision was recorded rather than left to show up as "not completed".
+
+## From Scrum to Kanban
+
+After Sprint 4 the project moved to Kanban (21 Nov). Scrum had served its purpose — four sprints of practice with goals, estimates, reviews and retrospectives, and a measured velocity — while a fixed sprint deadline fitted irregular evening work less well: the last two sprint goals were both missed, each on work that needed elapsed time (days of use, a fresh look the next day) rather than effort.
+
+| Column | WIP limit | Meaning |
+|---|---|---|
+| Idea | — | A raw idea; lives in the backlog, empty on the board |
+| To Do | 3 | Selected for work: description, Definition of Done and estimate ready |
+| In Progress | 2 | Active work — one item worked on, one waiting (for a night of running, for example) |
+| In Review | 2 | Waiting for a time-dependent check: a fresh look the next day, several nights, several days of use |
+| Won't Do | — | Abandoned, with a comment and a link |
+| Done | — | The last column: Jira reports count only the last column as completed |
+
+| Kept from Scrum | Changed |
+|---|---|
+| Definition of Done, Planning Poker (author first), retrospectives with actions, scope only through Jira | Sprints → a continuous flow with WIP limits |
+| Story points as a size measure | Velocity → throughput per two weeks and cycle time (cumulative flow diagram) |
+| — | Planning → weekly replenishment of *To Do* (Sundays); review and retrospective every second Friday |
+
+The switch exposed one more lesson: the *Won't Do* column, added on the right of *Done* on 8 Nov, had silently reset "completed" to zero for every past sprint in the velocity report. Moving *Done* back to the last column restored the numbers. The sprint reports were saved as screenshots before sprints were turned off.
 
 ## Epics
 
@@ -126,19 +155,25 @@ Two stretch items were withdrawn mid-sprint (voice practice and a weekly summary
 </details>
 
 <details>
-<summary><strong>Sprint 4 — closing stage 1 (in progress)</strong></summary>
+<summary><strong>Sprint 4 — closing stage 1 (18 SP, goal partly missed)</strong></summary>
 
 Planned at 31 SP from velocity, plus a 2-point reserve:
 
-| Item | SP | Status (19 Nov) |
+| Item | SP | Result |
 |---|---|---|
-| Nightly off-site backup | 8 | Running since 13 Nov; four nights verified; restore and no-delete tests passed |
+| Nightly off-site backup | 8 | Done — eight nights in a row, 88.5 MB stored after deduplication and compression; restore and no-delete tests passed |
 | Self-check run by a script | 8 | **Moved to the backlog on 19 Nov** at the scope checkpoint |
-| English tutor: conversations on 5 days | 5 | In progress |
-| README clean-up and publication | 5 | In progress — this repository |
+| English tutor: conversations on 5 days | 5 | Done — conversations on 7 days, checked in the learning log |
+| README clean-up and publication | 5 | **Not done** — 1 of 4 Definition-of-Done points met; carried over and split |
 | Incident postmortem | 3 | Done — [POSTMORTEM.md](../POSTMORTEM.md) |
 | Secrets inventory | 2 | Done |
-| Model and cost review after the first month *(reserve)* | 2 | Reserve; new models released on 17 Nov make it timely |
+| Model and cost review after the first month *(reserve)* | 2 | Not started; back to the backlog |
+
+![Sprint 4 burndown: flat until 17 November, then steps down to 7 SP on 20 November](img/jira-sprint4-burndown.png)
+
+*Sprint 4 burndown (the goal is in Polish, as written in Jira: "Stage 1 closed: Hermes is observable and backed up off the server, the tutor used on 5 days, the postmortem done, the repository published"). The line is flat for a week although the backup ran from 13 November: items closed only when their whole Definition of Done was met, and some of it needed several nights or days. The drop on 19 November is the scope checkpoint; 7 SP remain — publication and the reserve.*
+
+Retrospective actions: items whose Definition of Done depends on time start in the first week, with dated steps; any new work goes into Jira with an estimate or waits; off-sprint topics become one line in the backlog.
 
 </details>
 
