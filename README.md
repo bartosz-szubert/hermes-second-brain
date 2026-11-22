@@ -1,10 +1,10 @@
 # hermes-second-brain
 
-**A personal AI agent on a short leash — built and run like a production service, managed like an IT project.**
+**A personal AI agent on a short leash. Built and run like a production service, managed like an IT project.**
 
 ![Licence: MIT](https://img.shields.io/badge/code-MIT-blue) ![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey) ![Status: stage 1 closing](https://img.shields.io/badge/status-stage%201%20closing-yellow) ![Managed in Jira](https://img.shields.io/badge/managed%20in-Jira-0052CC)
 
-A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own** — and that the whole build was run as an agile project in Jira, four Scrum sprints and then Kanban, with measurable outcomes.
+A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own.** The whole build was also run as an agile project in Jira, four Scrum sprints and then Kanban, with measurable outcomes.
 
 | 4 sprints, then Kanban | 111 SP delivered in sprints | 82 decisions logged | 65 lessons recorded | 1 postmortem | 0 secrets in this repo |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -15,11 +15,11 @@ A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) conne
 
 ## Start here (5-minute tour)
 
-1. **[The short leash](#a-second-brain-on-a-short-leash)** — what the agent may and may not do, and how each limit is enforced.
-2. **[POSTMORTEM.md](POSTMORTEM.md)** — a real incident, written blameless, every fact marked as confirmed in data or not.
-3. **[Project management](docs/project-management.md)** — four sprints, velocity, two missed sprint goals and what changed afterwards, then the move to Kanban.
-4. **[Decision log](docs/decisions.md)** — every decision with the alternatives rejected and why.
-5. **[ops/backup](ops/backup/)** — a small, tested piece of real operations code.
+1. **[The short leash](#a-second-brain-on-a-short-leash):** what the agent may and may not do, and how each limit is enforced.
+2. **[POSTMORTEM.md](POSTMORTEM.md):** a real incident, written blameless, every fact marked as confirmed in data or not.
+3. **[Project management](docs/project-management.md):** four sprints, velocity, two missed sprint goals and what changed afterwards, then the move to Kanban.
+4. **[Decision log](docs/decisions.md):** every decision with the alternatives rejected and why.
+5. **[ops/backup](ops/backup/):** a small, tested piece of real operations code.
 
 ## A second brain on a short leash
 
@@ -29,10 +29,10 @@ The agent is useful because it can read a lot; it is safe because it can change 
 |---|---|---|
 | Read the whole Obsidian vault | Edit or delete the author's notes | Read-only copy of the vault; the agent has no access to the repository |
 | Propose pages for its own wiki folder | Publish them | A script outside the agent holds the only token and commits only batches the author approved |
-| Suggest a new skill or a memory entry | Save it | Approval gates for skill writes, agent-made skills and memory (off by default — switched on) |
+| Suggest a new skill or a memory entry | Save it | Approval gates for skill writes, agent-made skills and memory (off by default, switched on) |
 | Collect idioms while tutoring | Add them to the flashcards | The week's batch is approved by the author first |
-| Work in Telegram topics; journal and health have their own profiles | Read another profile's private files | A rule in every profile, tested. Hermes cannot block reads technically — a **documented, accepted risk** |
-| Use a small, reviewed toolset | Run a terminal, execute code or drive a browser from Telegram or scheduled jobs | Toolsets reviewed **per channel** — two gaps found by tests and closed |
+| Work in Telegram topics; journal and health have their own profiles | Read another profile's private files | A rule in every profile, tested. Hermes cannot block reads technically; a **documented, accepted risk** |
+| Use a small, reviewed toolset | Run a terminal, execute code or drive a browser from Telegram or scheduled jobs | Toolsets reviewed **per channel**; two gaps found by tests and closed |
 | Read web pages and news | Take instructions from them | External content is treated as data |
 | Report on its own actions | Have that report count unchecked | Claims are verified in logs or the session database |
 
@@ -47,13 +47,13 @@ From top to bottom: batch 009 proposes one new wiki page with its sources; the f
 
 ## How the work was run
 
-The project is deliberately managed the way software teams work, so that every practice can be shown, not just named.
+The project is deliberately managed the way software teams work, so that every practice can be shown in use.
 
 | Practice | In this project |
 |---|---|
 | **Scrum, then Kanban, in Jira** | Epics, stories, four two-week sprints with a goal, Planning Poker (author estimates first, re-vote after discussion), velocity 29 → 33 → 31 → 18; then Kanban with WIP limits once Scrum had served its learning goal |
 | **Definition of Done** | Started with "works and is tested"; retrospectives added *agent claims verified in data* and a *deployment checklist* for every scheduled job |
-| **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done — reported as missed, the item closed as *Won't Do*, its measurable part re-planned. Sprint 4 closed on time with publication not done, rather than stretched |
+| **Honest reporting** | Sprint 3 goal **not met** although 7 of 8 items were done. Reported as missed, the item closed as *Won't Do*, its measurable part re-planned. Sprint 4 closed on time with publication not done, rather than stretched |
 | **Retrospectives with actions** | Each sprint ends with 3–5 actions, and the next retro checks whether they worked |
 | **Decision records** | 82 decisions, each with rejected alternatives and the reason |
 | **Blameless postmortem** | [POSTMORTEM.md](POSTMORTEM.md): timeline, root cause, contributing factors, actions with their status |
