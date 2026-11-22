@@ -1,6 +1,6 @@
 # Lessons learned
 
-64 lessons from building and running the system, grouped by theme. Each one came from something that actually happened in this project.
+65 lessons from building and running the system, grouped by theme. Each one came from something that actually happened in this project.
 
 ## If you read only seven
 
@@ -66,6 +66,7 @@ Each of these changed how the project is run — the right-hand column is the pr
 - **Measure usage from the system, not from memory.** The session database showed which model really handled each conversation and how many tokens it used; memory (the author's and the agent's) had it wrong.
 - **"ok" on a scheduled job only means the session ended.** Whether the agent did the work shows in the number of tool calls in the sessions database, not in the job status.
 - **Read what the skill says it logs before calling an empty log a bug.** The critical-news log is empty on ordinary days by design.
+- **A service does not run in your shell.** Tested from a root shell, restic used its cache in the home directory; started by systemd, with no `HOME`, it silently ran without one and re-downloaded its metadata every night — noticed only when the storage provider's free daily read cap was exceeded. Set what a tool needs (here `RESTIC_CACHE_DIR`) in the unit itself, and check the first scheduled run, not only the manual one.
 - **A local test layout can be friendlier than the server.** The backup script passed locally and failed on the server because a parent folder was root-only there; reproduce the failing condition in a test before fixing, not just the happy path.
 - **Write a postmortem from data, and say what the data does not show.** Two events remembered from the incident were not in the database; marking them as unconfirmed made the document more credible, not less.
 - **Test the control, not the promise.** The agent described the write rules correctly, but the proof was a failed write ("Read-only file system"), a hand-made bad batch rejected by the script, and an unchanged commit history.

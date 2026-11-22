@@ -59,6 +59,7 @@ flowchart TD
 | **Encrypted before it leaves the server** (restic) | The storage provider only ever holds ciphertext |
 | **Storage key without the delete capability** | A compromised server cannot destroy its own backups. Since restic 0.15, a key that cannot delete makes restic *hide* files instead; a bucket lifecycle rule removes hidden files after 30 days, so pruning still frees space |
 | **SQLite copied through its backup API**, never as raw files | A live database copied as a file can be inconsistent or lose recent writes. Sources are read as root; any `-wal`/`-shm` side file this creates is handed back to the database owner, so the application never loses access |
+| **A persistent restic cache** (`/var/cache/restic`, created by systemd) | A system service has no home directory, so restic ran without its cache and downloaded index and tree data from the storage on every run — about 650 read transactions per night, found when the provider's free daily cap was exceeded. Fixed on 22 Nov |
 | **Caches and binaries excluded** | 1.1 GB of package caches would add nothing a reinstall cannot restore; the backup is about 130 MB |
 | **Retention 7 daily / 4 weekly / 6 monthly**, `restic check` on the 1st | Enough history to go back past an unnoticed problem; integrity checked regularly |
 | **One status line, owned by root, read by the agent** | The morning brief's self-check reports a missing file, an error, or a backup that is not from today. The line is in Polish because the brief is |
@@ -75,6 +76,7 @@ flowchart TD
 | Restore of one journal note | Identical to the original by SHA-256 |
 | Delete with the server's storage key, on a **dedicated decoy file** | Refused by the storage API (`401 unauthorized`); the decoy was then hidden and left for the lifecycle rule |
 | Nightly runs | Four consecutive automatic runs confirmed in the system journal before the item was closed |
+| Storage reads per run | After the cache fix, the next night's read transactions compared with the 650 of a run without cache |
 | Status in the brief | A fake error line appeared in the brief's self-check, then the real status was restored |
 
 Not yet done: a **full restore rehearsal on a fresh server** (in the backlog).

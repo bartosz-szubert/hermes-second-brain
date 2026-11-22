@@ -4,6 +4,10 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
+# Give restic a persistent cache: a system service has no HOME, and without
+# a cache every run re-downloads index and tree data from the storage.
+CacheDirectory=restic
+Environment=RESTIC_CACHE_DIR=/var/cache/restic
 Type=oneshot
 ExecStart=/usr/local/sbin/hermes-backup.sh
 Nice=10

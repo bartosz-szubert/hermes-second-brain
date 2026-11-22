@@ -6,7 +6,7 @@
 
 A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own** — and that the whole build was run as an agile project in Jira, four Scrum sprints and then Kanban, with measurable outcomes.
 
-| 4 sprints, then Kanban | 111 SP delivered in sprints | 82 decisions logged | 64 lessons recorded | 1 postmortem | 0 secrets in this repo |
+| 4 sprints, then Kanban | 111 SP delivered in sprints | 82 decisions logged | 65 lessons recorded | 1 postmortem | 0 secrets in this repo |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 
 **Author:** Bartosz Szubert — project leader in automotive manufacturing, building this in his own time to work hands-on with the tools and practices of software teams.
