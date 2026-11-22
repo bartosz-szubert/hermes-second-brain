@@ -16,7 +16,7 @@ Paths are set at the top of the script; the values here are neutral placeholders
 |---|---|
 | **Recovery point objective** | ≤ 24 hours (one snapshot a night) |
 | **Recovery time objective** | Not yet measured — a full restore on a fresh server has not been rehearsed (in the backlog) |
-| **Size** | About 130 MB for the first snapshot; 5–40 MB added per night |
+| **Size** | About 130 MB of source data; 5–45 MB added per run; 88.5 MB stored after eight nights (deduplicated and compressed) |
 | **Cost** | Within the storage provider's free tier |
 | **Signal on failure** | The next morning's brief, via the status line |
 
