@@ -81,7 +81,7 @@ Result: one line "Hermes: OK", or on problems a short list "Hermes: <what is not
 
 On even days of the month a quote, on odd days an English phrase.
 - Quote: short, with its author, verified with a web search (give a link to the source). If you cannot confirm the author, give a phrase instead.
-- Phrase: an idiom or colloquial expression useful in a PM's work or a presentation, formatted as *phrase* (Polish meaning) plus one example sentence. Never invent phrases; if you are not sure a phrase is idiomatic, pick another.
+- Phrase: an idiom or colloquial expression useful in project work or a presentation, formatted as *phrase* (Polish meaning) plus one example sentence. Never invent phrases; if you are not sure a phrase is idiomatic, pick another.
 
 ## 6. Question for today
 
