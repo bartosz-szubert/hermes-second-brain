@@ -2,7 +2,7 @@
 
 **A personal AI agent on a short leash. Built and run like a production service, managed like an IT project.**
 
-![Licence: MIT](https://img.shields.io/badge/code-MIT-blue) ![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey) ![Status: stage 1 closing](https://img.shields.io/badge/status-stage%201%20closing-yellow) ![Managed in Jira](https://img.shields.io/badge/managed%20in-Jira-0052CC)
+![Licence: MIT](https://img.shields.io/badge/code-MIT-blue) ![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey) ![Status: stage 1 closed](https://img.shields.io/badge/status-stage%201%20closed-brightgreen) ![Managed in Jira](https://img.shields.io/badge/managed%20in-Jira-0052CC)
 
 A self-hosted [Hermes Agent](https://github.com/NousResearch/hermes-agent) connected to an Obsidian knowledge base and used every day through Telegram: a morning brief, a journal, two language tutors, a critical-news watch and a personal wiki. What sets it apart from a typical "second brain" agent is that **it reads almost everything but can change almost nothing on its own.** The whole build was also run as an agile project in Jira, four Scrum sprints and then Kanban, with measurable outcomes.
 

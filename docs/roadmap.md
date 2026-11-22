@@ -17,13 +17,13 @@
 
 ### Stage 1 exit criteria
 
-Set when Sprint 4 was planned, checked at its review on 20 November:
+Set when Sprint 4 was planned, checked at its review on 20 November. Stage 1 closed on 22 November with four of five criteria met and one carried forward:
 
-| Criterion | Status (21 Nov) |
+| Criterion | Status (22 Nov) |
 |---|---|
 | Off-site backup running, a restore tested, failures visible in the brief | Met |
 | The journal incident written up as a blameless postmortem | Met |
-| This repository public, every file reviewed for private data | In progress — not met by the end of Sprint 4; now two items on the Kanban board |
+| This repository public, every file reviewed for private data | Met on 22 Nov — two days after Sprint 4, as two Kanban items; every file, screenshot and the whole commit history checked |
 | The English tutor used on five days of the sprint, checked in the learning log | Met — seven days |
 | The agent observable through a script-based self-check | **Moved to stage 1 follow-ups** at the scope checkpoint; an interim self-check runs in the brief |
 
