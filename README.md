@@ -65,6 +65,17 @@ The project is deliberately managed the way software teams work, so that every p
 
 *Velocity across the four sprints, straight from Jira. Sprint 1 shows no commitment because it was started before its items were estimated; Sprint 4 shows the scope checkpoint and the unpublished repository. Details in [project management](docs/project-management.md).*
 
+## What went wrong
+
+| What happened | What changed | Details |
+|---|---|---|
+| The journal bot replied with 13,000 characters of gibberish — a template default nobody had reviewed | The agent rebuilt from scratch; the model chosen from tests on real tasks | [Postmortem](POSTMORTEM.md) |
+| A tool review left a shell available to Telegram and to scheduled jobs | Toolsets reviewed per channel; every gap now has a test | [Security](docs/security.md#gaps-found-by-testing) |
+| The agent reported a failed job as done and quoted a reply it never gave | Agent claims are checked in logs or the session database before they count | [Lessons](docs/lessons.md) |
+| The backup failed on its first run on the server, and later ran without its cache and exceeded the storage provider's free daily read cap | A test reproducing each failure before the fix; settings put in the service, not the shell | [Backup](ops/backup/) |
+| Sprint 3 missed its goal although 7 of 8 items were done; Sprint 4 closed without publishing this repository | Outcomes instead of habits; time-dependent checks started early; then the move to Kanban | [Project management](docs/project-management.md#the-sprint-that-failed--and-what-changed) |
+| A board column added for abandoned work silently zeroed the velocity report for every past sprint | `Done` kept as the last column; reports re-checked after board changes | [From Scrum to Kanban](docs/project-management.md#from-scrum-to-kanban) |
+
 ## Architecture
 
 ```mermaid
