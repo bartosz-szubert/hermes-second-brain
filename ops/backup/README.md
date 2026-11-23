@@ -76,7 +76,7 @@ flowchart TD
 | Restore of one journal note | Identical to the original by SHA-256 |
 | Delete with the server's storage key, on a **dedicated decoy file** | Refused by the storage API (`401 unauthorized`); the decoy was then hidden and left for the lifecycle rule |
 | Nightly runs | Four consecutive automatic runs confirmed in the system journal before the item was closed |
-| Storage reads per run | **Pending** — the next night's read transactions, checked on 23 Nov against the 650 of a run without cache |
+| Storage reads per run | 28 read transactions on the first night with the cache, against 650 on a night without it (96% fewer) |
 | Status in the brief | A fake error line appeared in the brief's self-check, then the real status was restored |
 
 Not yet done: a **full restore rehearsal on a fresh server** (in the backlog).
