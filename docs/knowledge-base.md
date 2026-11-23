@@ -25,6 +25,12 @@ sequenceDiagram
     G->>A: Obsidian pulls within a minute
 ```
 
+## The vault today
+
+![Graph view of the vault in Obsidian: a few hundred linked notes, labels hidden](img/obsidian-graph.png)
+
+The vault in Obsidian's graph view, November 2026. Labels are hidden because the vault holds private notes.
+
 ## A real proposal
 
 A weekly batch from the English tutor, as it arrived on Telegram in November 2026 (Polish, shortened: personal learning details replaced with "(…)").
