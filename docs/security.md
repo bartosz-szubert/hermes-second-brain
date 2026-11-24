@@ -26,6 +26,7 @@ The system holds a private journal, study notes and personal plans, and it reads
 | **Credentials** | Keys only in root-only files on the server and in a password manager; never in notes, chat or screenshots; fine-grained, expiring tokens; the GitHub token and the backup key live on the host, never in the agent | A secrets inventory built by printing **names only, never values** (see below) |
 | **Accounts** | 2FA on GitHub, the model provider, the pay-as-you-go router, backup storage and n8n; model training on the author's data switched off where the provider allows it | Recovery codes stored only in the password manager |
 | **Data at rest and backups** | Nightly restic backup to Backblaze B2 in the EU, encrypted before it leaves the server; the server's storage key has **no delete capability**; files hidden by pruning are kept 30 days | A restored file compared by checksum; a delete attempt with the server's key refused by the storage API (401) — tested on a decoy file, not on real backups |
+| **Updates** | OS security patches installed daily, with an automatic night-time reboot when a patch needs one; n8n, Traefik and Hermes on a monthly patch day, release notes read first, versions pinned | After the first update round: kernel and containers checked after the reboot, only ports 22/80/443 public, the effective SSH settings unchanged, n8n reachable from outside and the Traefik dashboard still not exposed |
 | **Supply chain** | Every external skill read in full before installation (the built-in scanner is a second line, not a substitute); bundled skills disabled by default and re-enabled one by one; pinned, reviewed copies only | 53 bundled skills found enabled everywhere; several needed a terminal or wrote straight into the vault and stayed off |
 | **Publication** | Public and private material in separate repositories from day one; commit identity uses GitHub's private address; files reviewed and scanned before every commit to this repository | Identifiers (host names, container names, IPs, chat and topic ids, locations) searched for in every file before it was added |
 
@@ -50,7 +51,7 @@ Built in November 2026 with commands that printed only variable and field names:
 
 - **Full read isolation between profiles** — options compared; a second agent instance was rejected as too heavy; decision pending.
 - **Full restore rehearsal** — restore the whole system on a fresh server from backup, not just a single file.
-- **Pinned Docker image versions** and a controlled restart test.
+- **Hermes update** to a pinned current version, with every per-channel toolset, approval gate and profile rule re-checked afterwards (n8n and Traefik are already pinned).
 - **n8n editor reachable only through the tunnel** while webhooks stay public.
 - **Script-based self-check** with a read-only status folder mounted into the agent.
 - **Cost alerts and per-agent spending caps** for any future pay-as-you-go model use.

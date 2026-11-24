@@ -33,13 +33,13 @@ Open items, each in the backlog with a Definition of Done, pulled onto the Kanba
 
 | # | Item | Why it matters |
 |---|---|---|
-| 1 | **Security updates for the server and n8n**, with a fixed patching rhythm | Many patches were pending; the server is reachable from the internet |
+| 1 | ~~Security updates for the server and n8n, with a fixed patching rhythm~~ | **Done 24 Nov:** 69 packages and a new kernel, n8n 2.41.6 → 2.48.8, Traefik 3.7.10 → 3.7.17 (both pinned), monthly patch day ([D-83](decisions.md)) |
 | 2 | **Self-check run by a script on the host**, result in a read-only folder for the agent | Health checks that do not depend on the agent's own judgement; moved out of Sprint 4 at the scope checkpoint |
 | 3 | **Model and cost review** after the first month — including the models released in November | The review plan with decision rules is in [model selection](model-selection.md#review-plan-first-month-of-daily-use) |
 | 4 | **Full restore rehearsal** on a fresh server | Only a single-file restore has been tested so far |
 | 5 | **Cost alerts and per-agent caps** for any pay-as-you-go use | No automatic model fallback exists yet |
 | 6 | **Read isolation between profiles** | Today a tested rule, not a technical boundary |
-| 7 | **Pinned container images** and a controlled restart test | Fewer surprises from upstream changes |
+| 7 | **Hermes update** to a pinned version, with the security settings re-checked | Its image is newer than the running v0.21.2; n8n and Traefik are already pinned |
 
 ## Stage 2 — private
 
